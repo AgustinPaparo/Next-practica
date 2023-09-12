@@ -10,7 +10,7 @@ const NewPage = ({params}) => {
 
   useEffect(()=>{
     if (params.id){
-      fetch(`/api/task/${params.id}`)
+      fetch(`next-js-practice-agustin.vercel.app/api/task/${params.id}`)
     .then(res => res.json())
     .then(data =>{
       setTitle(data.title)
