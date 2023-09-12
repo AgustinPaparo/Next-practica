@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import {Roboto} from 'next/font/google'
 import './global.css'
 
