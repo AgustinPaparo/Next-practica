@@ -23,32 +23,40 @@ const NewPage = ({params}) => {
     e.preventDefault();
 
     if (params.id) {
-      const res = await fetch(`next-practica-git-main-agustinpaparo.vercel.app/api/task/${params.id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-          title,
-          description
-        }),
-        headers:{
-          'Content-Type':'application/json'
-        },
-      })
-      const data = await res.json()
-
-      console.log(data);
+      try{
+        const res = await fetch(`next-js-practice-agustin.vercel.app/api/task/${params.id}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            title,
+            description
+          }),
+          headers:{
+            'Content-Type':'application/json'
+          },
+        })
+        const data = await res.json()
+  
+        console.log(data);
+      }catch(e){
+        console.log(e);
+      }
     } else {
-      const res = await fetch("next-practica-git-main-agustinpaparo.vercel.app/api/task", {
-        method: "POST",
-        body: JSON.stringify({
-          title,
-          description,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      console.log(data);
+      try {
+        const res = await fetch("next-js-practice-agustin.vercel.app/api/task", {
+          method: "POST",
+          body: JSON.stringify({
+            title,
+            description,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await res.json();
+        console.log(data);        
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     router.push("/home");
