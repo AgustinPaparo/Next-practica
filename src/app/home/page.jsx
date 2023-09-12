@@ -9,11 +9,7 @@ async function listTasks() {
     return data;
   } catch (e) {
     console.log(e);
-    const data = [{
-      id: 0,
-      title: 'No funciona',
-      description: e
-    }];
+    const data = [];
     return data;
   }
 }
