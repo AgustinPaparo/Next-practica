@@ -2,7 +2,7 @@ import TaskCard from "@/components/Task/TaskCard";
 
 async function listTasks() {
   try {
-    const res = await fetch("nextproject-1st253mw9-agustinpaparo.vercel.app/api/task", {
+    const res = await fetch("next-js-practice-agustin.vercel.app/api/task", {
       cache: "no-store",
     });
     const data = await res.json();

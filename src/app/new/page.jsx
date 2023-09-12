@@ -23,7 +23,7 @@ const NewPage = ({params}) => {
     e.preventDefault();
 
     if (params.id) {
-      const res = await fetch(`nextproject-1st253mw9-agustinpaparo.vercel.app/api/task/${params.id}`, {
+      const res = await fetch(`next-js-practice-agustin.vercel.app/api/task/${params.id}`, {
         method: 'PUT',
         body: JSON.stringify({
           title,
@@ -37,7 +37,7 @@ const NewPage = ({params}) => {
 
       console.log(data);
     } else {
-      const res = await fetch("nextproject-1st253mw9-agustinpaparo.vercel.app/api/task", {
+      const res = await fetch("next-js-practice-agustin.vercel.app/api/task", {
         method: "POST",
         body: JSON.stringify({
           title,
