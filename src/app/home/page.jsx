@@ -14,6 +14,9 @@ async function listTasks() {
   }
 }
 
+//Para que se actualice dinamicamente con los cambios en produccion.
+export const dynamic = 'force-dynamic'
+
 const Home = async () => {
   const list = await listTasks();
   return (
